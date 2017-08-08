@@ -123,9 +123,9 @@ var album = {
 
 //Now, loop through your album object alerting every song title individually.
 
-for (let i = 0; i < album.length; i++) {
-	alert(album[i]);
+for (var albumInfo in album){
 	
+		alert(albumInfo);
 }
 
 
