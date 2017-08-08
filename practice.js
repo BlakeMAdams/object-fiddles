@@ -97,9 +97,9 @@ var alsoMe = {
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
-for (let i = 0; i < alsoMe.length; i++){
-	alert(alsoMe[i]);
+for (var meInfo in alsoMe){
 	
+		alert(alsoMe[meInfo]);
 }
 
 
@@ -173,11 +173,18 @@ var user1 = {
 /*Above you're given a user object. Loop through the user object checking to make sure
 that each value is truthy. If it's not truthy, remove it from the object. */
 
-  //Code Here
-
+for (var userInfo in user1){
+	if (user1[userInfo]) {
+	} else { delete user1[userInfo]; }
+	
+}
+console.log(user1);
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
-  //Code Here
+user1.name = 'Blake Adams';
+pwHash = 'owetiu#fok';
+user1.username = 'BlakeMAdams';
+
 
 
 
@@ -201,11 +208,12 @@ var user2 = {
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
-  //Code Here
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in';
 
 //Now call the sayEmail method that's on the user object which will alert the users email
 
-  //Code Here
+user2.sayEmail();
 
 
 
@@ -217,17 +225,19 @@ var user2 = {
 
 //Create an empty object called methodCollection.
 
-  //Code Here
+methodCollection = {};
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
-  //Code Here
+methodCollection.alertHello = function() { alert('hello');}
+methodCollection.logHello = function() { console.log('hello');}
 
 //Now call your alertHello and logHello methods.
 
-  //Code Here
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
 
@@ -238,7 +248,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called makePerson which takes in name, birthday, ssn as its
 // parameters and returns a new object with all of the information that you passed in.
 
-  //Code Here
+function makePerson(name,birthday,ssn) {
+	
+	return { 
+		name:name,
+		birthday:birthday,
+		ssn:ssn
+	};
+}
 
 
 
@@ -248,8 +265,17 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 // Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
 
-  //Code Here
 
+function makeCard(cardNumber, expirationDate, securityCode) {
+	var creditCard = {
+		cardNumber:cardNumber,
+		expirationDate:expirationDate,
+		securityCode:securityCode
+	}
+	
+	return creditCard;
+	
+}
 
 
 //NEXT PROBLEM
