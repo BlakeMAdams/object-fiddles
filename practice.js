@@ -44,7 +44,7 @@ favoriteThings.book = 'Harry Potter';
 
 
 //NEXT PROBLEM
-
+var backPack
 
 
 /*Create an empty Object called backPack. Now, create a variable called 'item'
@@ -55,8 +55,14 @@ Set the value of that key to 'chapstick'.
 Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. */
 
-var backPack = {};
+var backPack = {
+	firstPocket:'chapstick'
+	
+};
 var item = 'firstPocket';
+
+backPack[item] = 'chapstick';
+
 
 backPack[item] = 'chapstick';
 backPack.color = 'grey';
@@ -91,7 +97,7 @@ var alsoMe = {
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
-for (var i = 0; i < alsoMe.length; i++){
+for (let i = 0; i < alsoMe.length; i++){
 	alert(alsoMe[i]);
 	
 }
@@ -111,13 +117,16 @@ var album = {
 	moMurdah:187,
 	quickie:1,
 	help:911,
-	feelzGoodMan,420
+	feelzGoodMan:420
 	
 }
 
 //Now, loop through your album object alerting every song title individually.
 
-  //Code Here
+for (let i = 0; i < album.length; i++) {
+	alert(album[i]);
+	
+}
 
 
 
@@ -129,13 +138,23 @@ var album = {
 
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
-  //Code Here
+var states = {
+	utah:3000000,
+	texas:13,
+	newYork:33,
+	wyoming:5,
+	florida:11
+	
+}
 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
-  //Code Here
-
-
+for (var stateTest in states){
+	if (states[stateTest] > 30000){
+		
+		alert(stateTest);
+	} 
+}
 
 
 //NEXT PROBLEM
